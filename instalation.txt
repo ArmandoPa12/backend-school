@@ -8,3 +8,4 @@ Binary zip archive	apache-maven-3.9.9-bin.zip
 descomprimir, crear carpeta para mover ahí y configurar la variable de entorno
 
 ./mvnw spring-boot:run
+        
