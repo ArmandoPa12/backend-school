@@ -19,4 +19,6 @@ public interface UserService {
     LoginResponse loginUsuario(User user);
 
     String register(User user);
+
+    boolean existsByRolId(Long id);
 }

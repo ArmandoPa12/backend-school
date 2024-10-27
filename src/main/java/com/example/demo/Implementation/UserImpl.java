@@ -41,6 +41,7 @@ public class UserImpl implements UserService {
         User nuevo = new User();
         nuevo.setUsername(user.getUsername());
         nuevo.setPassword(this.passwordEncoder.encode(user.getPassword()));
+        nuevo.setRol(user.getRol());
         userRepository.save(nuevo);
         return user.getUsername();
     }
@@ -96,6 +97,11 @@ public class UserImpl implements UserService {
     @Override
     public User findUser(String username) {
         return userRepository.findByUsername(username);
+    }
+
+    @Override
+    public boolean existsByRolId(Long id) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     

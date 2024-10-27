@@ -40,13 +40,6 @@ public class UserController {
     @PutMapping("/{id}")
     public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User x) {
         User editad = userService.findById(id);
-        // editad.setNombre(x.getNombre());
-        // editad.setApellidos(x.getApellidos());
-        // editad.setCi(x.getCi());
-        // editad.setTelefono(x.getTelefono());
-        // editad.setRol(x.getRol());
-        // editad.setSueldo(x.getSueldo());
-
         User e = userService.save(editad);
 
         return ResponseEntity.ok(e);
