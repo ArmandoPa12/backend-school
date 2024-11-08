@@ -21,4 +21,9 @@ public interface UserService {
     String register(User user);
 
     boolean existsByRolId(Long id);
+
+    boolean existsByUsername(String correo);
+
+    
+
 }

@@ -93,9 +93,9 @@ CREATE TABLE users (
 CREATE TABLE persona_idioma (
     id_personal INT REFERENCES personal(carnet),
     id_idioma INT REFERENCES idioma(id),
-    estado_escribe estado_enum NOT NULL,
-    estado_habla estado_enum NOT NULL,
-    estado_lee estado_enum NOT null,
+    estado_escribe estado_enum_b NOT NULL,
+    estado_habla estado_enum_b NOT NULL,
+    estado_lee estado_enum_b NOT null,
     PRIMARY KEY (id_personal, id_idioma)
 );
 
@@ -119,15 +119,17 @@ CREATE TABLE curso_paralelo (
 -- *************
 CREATE TABLE edificio (
     id SERIAL PRIMARY KEY,
+    codigo_colegio INT references colegio(codigo),
     descripcion TEXT,
     nombre VARCHAR
 );
 CREATE TABLE espacio (
     id SERIAL PRIMARY KEY,
     descripcion TEXT,
+    codigo_colegio INT REFERENCES colegio(codigo),
     id_edificio INT REFERENCES edificio(id),
     nombre VARCHAR,
-    ubicacion INT
+    ubicacion VARCHAR
 );
 
 

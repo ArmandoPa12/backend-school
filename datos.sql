@@ -32,9 +32,31 @@ INSERT INTO idioma (descripcion,nombre)VALUES ('descripcion','chino');
 
 INSERT INTO colegio (codigo,area,canton,ciudad,codigo_distrito,departamento,descripcion,direccion,distrito,estado,nombre,provincia,seccion_municipal,turno,zona)
 VALUES (100001,'area1','canton1','santa cruz',1002,'santa cruz','descripcion','AV los palotes','MZ-25','Abierta','Elvira Parada','andrez ibanes','SEC-10','Mañana','Zona plan 3000');
-
 INSERT INTO colegio (codigo,area,canton,ciudad,codigo_distrito,departamento,descripcion,direccion,distrito,estado,nombre,provincia,seccion_municipal,turno,zona)
 VALUES (100002,'area1','canton1','santa cruz',1002,'santa cruz','descripcion','AV los palotes','MZ-25','Abierta','Elvira Parada','andrez ibanes','SEC-10','Mañana','Zona plan 3000');
+
+-- registrar persona por Postman
+
+insert into aula (nombre) values ('Aula 1');
+insert into aula (nombre) values ('Aula 2');
+insert into aula (nombre) values ('Aula 3');
+insert into aula (nombre) values ('Aula 4');
+insert into aula (nombre) values ('Aula 5');
+
+insert into edificio (codigo_colegio,nombre, descripcion) values (100002,'Es un edificio grande', 'FICCT');
+insert into edificio (codigo_colegio,nombre, descripcion) values (100002,'Es un edificio chico', 'Medicina');
+
+insert into espacio (descripcion, codigo_colegio,nombre, id_edificio,ubicacion) values ('es una parque',100002,1,'AV azul');
+insert into espacio (descripcion,nombre, id_edificio,ubicacion) values ('es un lote','juancho',1,'AV rojo');
+
+
+select * from espacio e 
+
+select * from aula_edificio ae 
+
+select * from edificio e 
+
+select * from aula a 
 
 select * from personal p 
 
@@ -42,5 +64,12 @@ select * from users u
 
 select * from rol r 
 
+select * from rol_privilegio rp 
 
+select * from idioma 
+
+select * from persona_idioma pi2 
+
+select * from colegio c 
+	
 

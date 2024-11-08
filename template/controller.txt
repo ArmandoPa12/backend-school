@@ -8,7 +8,7 @@
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<CLASE> getEntity(@PathVariable Long id) {
+    public ResponseEntity<?> getEntity(@PathVariable Long id) {
         if (!service.existsById(id)) {  
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();         
         }
@@ -27,7 +27,7 @@
     }
 
     @PostMapping(path = "/save")
-    public ResponseEntity<CLASE> saveRegistro(@RequestBody CLASE x) {
+    public ResponseEntity<?> saveRegistro(@RequestBody CLASE x) {
         return ResponseEntity.ok(service.save(x));
     }
 

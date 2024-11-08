@@ -1,6 +1,11 @@
 package com.example.demo.DTO;
 
 import java.util.Date;
+import java.util.List;
+
+import com.example.demo.Entity.Personal.GeneroEnum;
+
+
 
 public class PersonalDTO {
     private Integer carnet;
@@ -18,12 +23,14 @@ public class PersonalDTO {
     private String direccionDomiciliaria;
     private Boolean extranjero;
     private Date fechaNacimiento;
-    private String genero;
+    private GeneroEnum genero;
     private String nombres;
     private Boolean normalista;
     private Integer nroCelular;
     private Integer nroItem;
     private Integer rda;
+    private List<IdiomaDTO> idiomas;
+
 
     public PersonalDTO() {
     }
@@ -140,11 +147,11 @@ public class PersonalDTO {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public String getGenero() {
+    public GeneroEnum getGenero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
+    public void setGenero(GeneroEnum genero) {
         this.genero = genero;
     }
 
@@ -194,6 +201,14 @@ public class PersonalDTO {
 
     public void setIdRol(Long idRol) {
         this.idRol = idRol;
+    }
+
+    public List<IdiomaDTO> getIdiomas() {
+        return idiomas;
+    }
+
+    public void setIdiomas(List<IdiomaDTO> idiomas) {
+        this.idiomas = idiomas;
     }
     
 }

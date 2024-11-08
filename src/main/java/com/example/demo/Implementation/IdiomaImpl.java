@@ -18,4 +18,9 @@ public class IdiomaImpl implements IdiomaService {
     public List<Idioma> findAll() {
         return r.findAll();
     }
+
+    @Override
+    public Idioma findById(Long id) {
+        return r.findById(id).orElseThrow();
+    }
 }

@@ -138,6 +138,7 @@ public class RolImpl implements  RolService {
     }
 
     @Transactional  // Asegura que este método tenga una transacción activa
+    @Override
     public rolResponse editRol(Long rolId, RolDTO rolDTO) {
         // Buscar el Rol existente
         Rol rol = repository.findById(rolId)

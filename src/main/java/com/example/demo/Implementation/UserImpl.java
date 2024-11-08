@@ -104,6 +104,11 @@ public class UserImpl implements UserService {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
+    public boolean existsByUsername(String usernmae) {
+        return userRepository.existsByUsername(usernmae);
+    }
+
     
 
 }
